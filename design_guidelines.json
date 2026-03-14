@@ -1,0 +1,173 @@
+{
+  "identity": {
+    "role": "E1: The Anti-AI Designer",
+    "mission": "Create a luxury, emotionally resonant dermatology clinic website that feels like a high-end spa, not a sterile hospital.",
+    "principles": [
+      "Fusion over Imitation: Clinical Precision x Spa Warmth",
+      "Emotion First: Trust, Calm, Exclusivity",
+      "Content is King: Every section tells the story of 'Rejuvenation'",
+      "Negative Space: Luxury = Space. Don't crowd the elements."
+    ]
+  },
+  "technical_stack": {
+    "framework": "React",
+    "styling": "Tailwind CSS",
+    "components": "Shadcn UI (Customized)",
+    "icons": "Lucide React (Default), Phosphor Icons (Optional)",
+    "fonts": "Google Fonts (Playfair Display, Lato)"
+  },
+  "design_system": {
+    "theme": "light",
+    "colors": {
+      "palette": {
+        "primary_bg": "#FAF3E0",
+        "secondary_bg": "#FDF8EE",
+        "text_primary": "#2C1A0E",
+        "text_secondary": "#5D4037",
+        "accent_gold": "#C9A84C",
+        "accent_gold_hover": "#B8860B",
+        "highlight_champagne": "#F7E7CE",
+        "error": "#ef4444",
+        "success": "#22c55e"
+      },
+      "usage": {
+        "body_bg": "primary_bg",
+        "card_bg": "#FFFFFF",
+        "headings": "text_primary",
+        "body_text": "text_secondary",
+        "primary_button": "accent_gold",
+        "borders": "accent_gold (opacity 0.2)"
+      }
+    },
+    "typography": {
+      "font_family": {
+        "heading": "Playfair Display, serif",
+        "body": "Lato, sans-serif",
+        "accent": "Playfair Display, serif"
+      },
+      "scale": {
+        "h1": "text-5xl md:text-7xl font-medium tracking-tight",
+        "h2": "text-4xl md:text-5xl font-medium tracking-tight",
+        "h3": "text-2xl md:text-3xl font-medium",
+        "body": "text-base md:text-lg leading-relaxed",
+        "caption": "text-sm uppercase tracking-widest text-accent_gold"
+      }
+    },
+    "spacing": {
+      "section_padding": "py-20 md:py-32",
+      "container_padding": "px-6 md:px-12",
+      "element_gap": "gap-8 md:gap-12"
+    },
+    "visual_enhancers": {
+      "shadows": {
+        "soft": "0 4px 20px -2px rgba(44, 26, 14, 0.05)",
+        "hover": "0 10px 40px -5px rgba(201, 168, 76, 0.15)"
+      },
+      "borders": {
+        "subtle": "1px solid rgba(201, 168, 76, 0.2)",
+        "divider": "1px solid rgba(201, 168, 76, 0.3)"
+      },
+      "radius": {
+        "card": "rounded-none md:rounded-lg",
+        "button": "rounded-full"
+      },
+      "textures": [
+        "Subtle grain overlay on backgrounds",
+        "Thin gold lines as section dividers",
+        "Watermark lotus/leaf opacity-5 absolute"
+      ]
+    },
+    "animation": {
+      "entrance": "fade-in-up duration-700 ease-out",
+      "scroll": "reveal-on-scroll",
+      "hover": "transform -translate-y-1 transition-all duration-300"
+    }
+  },
+  "layout_strategy": {
+    "grid_system": "The Bento Grid (Mode A: Tetris) for Services",
+    "alignment": "Asymmetrical balance. Center headings for 'Royal' feel, but offset content for interest.",
+    "container_width": "max-w-7xl mx-auto"
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-[#C9A84C] text-white hover:bg-[#B8860B] rounded-full px-8 py-3 transition-all duration-300 shadow-lg hover:shadow-xl font-serif tracking-wide",
+      "secondary": "border border-[#C9A84C] text-[#2C1A0E] hover:bg-[#FAF3E0] rounded-full px-8 py-3 transition-all duration-300 font-serif tracking-wide",
+      "ghost": "text-[#C9A84C] hover:text-[#B8860B] font-medium underline-offset-4 hover:underline"
+    },
+    "cards": {
+      "service_card": "bg-white p-8 border border-[#F7E7CE] hover:border-[#C9A84C] transition-colors duration-300 shadow-soft hover:shadow-hover group",
+      "testimonial_card": "bg-[#FDF8EE] p-8 relative italic font-serif text-lg"
+    },
+    "inputs": {
+      "default": "bg-transparent border-b border-[#C9A84C]/50 focus:border-[#C9A84C] rounded-none px-0 py-2 outline-none transition-colors"
+    },
+    "navigation": {
+      "navbar": "fixed top-0 w-full z-50 bg-[#FAF3E0]/90 backdrop-blur-md border-b border-[#C9A84C]/20 py-4"
+    }
+  },
+  "assets": {
+    "images": {
+      "hero_bg": "https://images.unsplash.com/photo-1737978697863-5d65495b28ef?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "doctor_portrait": "https://customer-assets.emergentagent.com/job_skin-clinic-bhopal/artifacts/xwu6tfna_image.png",
+      "services": {
+        "skin": "https://images.unsplash.com/photo-1737978697863-5d65495b28ef?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "laser": "https://images.unsplash.com/photo-1663229049147-30f47be043ea?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "hair": "https://images.unsplash.com/photo-1720569103986-749a93a4baac?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "cosmetic": "https://images.unsplash.com/photo-1758188753373-5b01a0fc6d9d?crop=entropy&cs=srgb&fm=jpg&q=85"
+      },
+      "texture": "https://images.unsplash.com/photo-1502780033682-7c480d8624b3?crop=entropy&cs=srgb&fm=jpg&q=85"
+    }
+  },
+  "page_structure": [
+    {
+      "section": "Hero",
+      "type": "Full Screen",
+      "content": "Headline: 'Timeless Beauty, Expert Care'. Sub: 'Bhopal's Premier Dermatology & Aesthetics Clinic'. CTA: 'Book Consultation'. Background: Soft glow/image."
+    },
+    {
+      "section": "About Doctor",
+      "type": "Split Layout",
+      "content": "Image Left (Dr. Nidhi), Text Right. Focus on credentials (MBBS, MD) and 'Art of Dermatology' philosophy."
+    },
+    {
+      "section": "Services",
+      "type": "Bento Grid",
+      "content": "4 Cards: Clinical Dermatology, Laser Treatments, Hair Restoration, Cosmetic/Aesthetics. Icons + Short description."
+    },
+    {
+      "section": "Why Choose TruDerm",
+      "type": "Feature List",
+      "content": "Trust signals: 'FDA Approved Tech', 'Personalized Plans', 'Hygiene Standards'. Use gold icons."
+    },
+    {
+      "section": "Treatment Spotlight",
+      "type": "Carousel/Highlight",
+      "content": "Focus on popular treatments (Hydrafacial, Laser Hair Removal) with 'Learn More'."
+    },
+    {
+      "section": "Testimonials",
+      "type": "Horizontal Scroll",
+      "content": "Patient stories. 'Best skin clinic in Bhopal'."
+    },
+    {
+      "section": "Contact & Map",
+      "type": "Two Column",
+      "content": "Left: Address, Phone, Email. Right: Google Maps Embed."
+    },
+    {
+      "section": "Footer",
+      "type": "Minimal",
+      "content": "Copyright, Social Links, Quick Links."
+    }
+  ],
+  "instructions_to_main_agent": [
+    "Install 'lucide-react' for icons.",
+    "Import Google Fonts in index.css: @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');",
+    "Use 'Playfair Display' for all Headings (h1-h6). Use 'Lato' for body text.",
+    "Implement the 'Book Appointment' as a Shadcn Dialog/Modal containing a form.",
+    "Ensure the gold color (#C9A84C) is used for accents (lines, buttons, icons), NOT for large backgrounds.",
+    "Use the doctor's image provided in the artifacts.",
+    "For the 'Services' section, use the 'Bento Grid' layout defined in the guidelines.",
+    "Add 'data-testid' to all interactive elements."
+  ]
+}
