@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import "@/App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import axios from "axios";
 import { Toaster, toast } from "sonner";
 import Navbar from "@/components/Navbar";
@@ -13,15 +14,12 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import AppointmentModal from "@/components/AppointmentModal";
+import ReviewsPage from "@/components/ReviewsPage";
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 const API = `${BACKEND_URL}/api`;
 
-function App() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  // Scroll reveal observer
+function HomePage({ onBookClick }) {
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -33,10 +31,27 @@ function App() {
       },
       { threshold: 0.1, rootMargin: "0px 0px -50px 0px" }
     );
-
     document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
     return () => observer.disconnect();
   }, []);
+
+  return (
+    <>
+      <HeroSection onBookClick={onBookClick} />
+      <AboutDoctor />
+      <ServicesSection />
+      <WhyChoose />
+      <TestimonialsSection />
+      <RatingsBar />
+      <TreatmentSpotlight />
+      <ContactSection onBookClick={onBookClick} />
+    </>
+  );
+}
+
+function App() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleBookAppointment = useCallback(async (formData) => {
     setIsSubmitting(true);
@@ -52,35 +67,33 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white" data-testid="truderm-app">
-      <Toaster
-        position="top-center"
-        toastOptions={{
-          style: {
-            fontFamily: "'Lato', sans-serif",
-            background: "#FFFFFF",
-            border: "1px solid rgba(201,168,76,0.25)",
-            color: "#2C1A0E",
-          },
-        }}
-      />
-      <Navbar onBookClick={() => setIsModalOpen(true)} />
-      <HeroSection onBookClick={() => setIsModalOpen(true)} />
-      <AboutDoctor />
-      <ServicesSection />
-      <WhyChoose />
-      <TestimonialsSection />
-      <RatingsBar />
-      <TreatmentSpotlight />
-      <ContactSection onBookClick={() => setIsModalOpen(true)} />
-      <Footer />
-      <AppointmentModal
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-        onSubmit={handleBookAppointment}
-        isSubmitting={isSubmitting}
-      />
-    </div>
+    <BrowserRouter>
+      <div className="min-h-screen bg-white" data-testid="truderm-app">
+        <Toaster
+          position="top-center"
+          toastOptions={{
+            style: {
+              fontFamily: "'Lato', sans-serif",
+              background: "#FFFFFF",
+              border: "1px solid rgba(201,168,76,0.25)",
+              color: "#2C1A0E",
+            },
+          }}
+        />
+        <Navbar onBookClick={() => setIsModalOpen(true)} />
+        <Routes>
+          <Route path="/" element={<HomePage onBookClick={() => setIsModalOpen(true)} />} />
+          <Route path="/reviews" element={<ReviewsPage />} />
+        </Routes>
+        <Footer />
+        <AppointmentModal
+          isOpen={isModalOpen}
+          onClose={() => setIsModalOpen(false)}
+          onSubmit={handleBookAppointment}
+          isSubmitting={isSubmitting}
+        />
+      </div>
+    </BrowserRouter>
   );
 }
 

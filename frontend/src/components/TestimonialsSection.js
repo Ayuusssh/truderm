@@ -1,27 +1,28 @@
-import { Quote } from "lucide-react";
+import { Quote, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
-const testimonials = [
+const featuredReviews = [
   {
-    name: "Priya Sharma",
-    text: "I walked in with years of stubborn pigmentation and walked out with a treatment plan that actually worked. Dr. Nidhi doesn't promise overnight miracles — she delivers lasting results.",
-    treatment: "Pigmentation Correction",
+    name: "Anjali Chakravarty",
+    text: "I was skeptical at first but they cured my hormonal acne in 4 months. I started seeing visible results in just 1 month. Now my skin is all clear, no scars nothing and it's very healthy.",
+    treatment: "Acne Treatment",
     rating: 5,
   },
   {
-    name: "Rahul Verma",
-    text: "After visiting three other clinics for hair fall, I'd almost given up. Dr. Nidhi diagnosed the root cause in one session. Four months later, my confidence is back.",
-    treatment: "Hair Restoration",
+    name: "Aditi Shukla",
+    text: "I've been visiting Dr Nidhi for laser, and even though I wasn't available on the times she advised, she gave me results beyond expectations — without any burns or ulcers. Always reachable over phone.",
+    treatment: "Laser Treatment",
     rating: 5,
   },
   {
-    name: "Ananya Patel",
-    text: "The laser treatment was completely painless — nothing like I expected. My acne scars have faded dramatically. The clinic feels more like a luxury spa than a doctor's office.",
-    treatment: "Laser Scar Treatment",
+    name: "Shruti Choudhary",
+    text: "Went to the clinic for acne scar removal. The whole process was well planned. Doctor informed me about each step clearly. Saw visible difference in just 3 sittings. Would recommend to everyone.",
+    treatment: "Acne Scar Removal",
     rating: 5,
   },
   {
-    name: "Meera Joshi",
-    text: "What sets TruDerm apart is the honesty. Dr. Nidhi told me what I needed — not what would make the most money. That kind of integrity is rare and invaluable.",
+    name: "Manav Mathur",
+    text: "A fantastic experience with Dr. Nidhi Rana. Her professionalism and expertise were evident from the start. She took the time to understand my concerns and crafted a tailored treatment plan.",
     treatment: "General Consultation",
     rating: 5,
   },
@@ -41,10 +42,13 @@ export default function TestimonialsSection() {
             In Their Own Words
           </h2>
           <div className="w-16 h-px bg-[#C9A84C] mx-auto mt-4" />
+          <p className="text-[#5D4037] text-sm mt-4">
+            From 896+ verified Google reviews (4.9 rating)
+          </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-6 md:gap-8">
-          {testimonials.map((t, i) => (
+          {featuredReviews.map((t, i) => (
             <div
               key={i}
               className="reveal bg-[#FAFAFA] p-8 md:p-10 rounded-lg relative border border-[#E8E4DE] shadow-[0_2px_12px_rgba(0,0,0,0.03)]"
@@ -76,6 +80,18 @@ export default function TestimonialsSection() {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* View all reviews CTA */}
+        <div className="text-center mt-12 reveal">
+          <Link
+            to="/reviews"
+            className="inline-flex items-center gap-2 border border-[#C9A84C] text-[#2C1A0E] px-8 py-3.5 rounded-full text-sm font-semibold tracking-wider uppercase hover:bg-[#C9A84C]/5 transition-all duration-300 group"
+            data-testid="view-all-reviews"
+          >
+            Read All 896+ Patient Reviews
+            <ArrowRight className="w-4 h-4 text-[#C9A84C] group-hover:translate-x-1 transition-transform" />
+          </Link>
         </div>
       </div>
     </section>
