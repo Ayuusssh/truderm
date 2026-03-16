@@ -28,10 +28,10 @@ api_router = APIRouter(prefix="/api")
 
 # Define Models
 class AppointmentCreate(BaseModel):
-    name: str
-    phone: str
-    service: str
-    preferred_date: str
+    name: str = Field(..., min_length=1)
+    phone: str = Field(..., min_length=1)
+    service: str = Field(..., min_length=1)
+    preferred_date: str = Field(..., min_length=1)
     message: Optional[str] = ""
 
 class Appointment(BaseModel):
