@@ -23,8 +23,12 @@ Luxury dermatology clinic website for TruDerm Skin Clinic (Dr. Nidhi Rana), Bhop
 
 ## What's Been Implemented (Dec 2025)
 - Full single-page website with 9 sections
-- Appointment booking (modal form → POST /api/appointments → MongoDB)
+- White + Gold elite color palette (updated from cream)
+- Elevated copywriting across all sections
+- Appointment booking (modal form -> POST /api/appointments -> MongoDB)
 - Shadcn Dialog, Calendar, Select, Popover components used
+- 46 real Google reviews on dedicated /reviews page with search & category filters
+- 4 featured real reviews on homepage testimonials section
 - Mobile hamburger menu
 - Gold shimmer animation, scroll reveal, hover effects
 - Backend validation for required fields
